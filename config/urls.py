@@ -24,5 +24,7 @@ urlpatterns = [
     path('api/signup/',SignUpView.as_view(),name='sign_up'),
     path('api/login/',LogInView.as_view(),name='log_in'),
     path('api/token/refresh/',TokenRefreshView.as_view(),name='token_refresh'),
-    path('api/trip/',include('app.urls','trip',))
+    path('api/trip/',include('app.urls','trip',)),
+    path('api/driver/', include('driver.urls'))
+
 ]

@@ -10,10 +10,10 @@ class UserAdmin(DefaultAdmin):
 @admin.register(Trip)
 class TripAdmin(admin.ModelAdmin):
     fields = (
-        'id','pick_up','drop_off_address','status','created','update',
+        'id','user','pick_up','drop_off_address','status','created','update',
     )
     list_display = (
-        'id','pick_up','drop_off_address','status','created','update',
+        'id','user','pick_up','drop_off_address','status','created','update',
     )
     list_filter = (
         'status',

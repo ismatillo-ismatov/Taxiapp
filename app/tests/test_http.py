@@ -68,7 +68,7 @@ class HttpTripsTest(APITestCase):
         act_trip_ids = [trip.get('id') for trip in response.data]
         self.assertCountEqual(exp_trip_ids,act_trip_ids)
 
-    def test_user_can_retrieve_trip_by_id(self):
+    def test_user_can_retrieve_trip_by_id(self) -> object:
         trip = Trip.objects.create(pick_up_address='A',drop_off_address='B')
         response = self.client.get(trip.get_absolute_url,
                                    HTTP_AUTHORIZATION=f'Bearer {self.access}'
